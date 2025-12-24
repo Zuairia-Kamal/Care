@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-gray-200 py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* About Section */}
+       
         <div>
           <h3 className="text-xl font-bold mb-4">Care.xyz</h3>
           <p className="text-gray-400">
@@ -15,7 +15,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Navigation Links */}
+      
         <div>
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
           <ul className="space-y-2">
@@ -42,13 +42,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact Info */}
+     
         <div>
           <h3 className="text-xl font-bold mb-4">Contact</h3>
           <p className="text-gray-400">Email: support@care.xyz</p>
           <p className="text-gray-400">Phone: +1 234 567 890</p>
           <div className="flex space-x-4 mt-4">
-            {/* You can add social icons here */}
+           
             <Link href="#" className="hover:text-white">Facebook</Link>
             <Link href="#" className="hover:text-white">Twitter</Link>
             <Link href="#" className="hover:text-white">Instagram</Link>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { auth } from "@/lib/firebase"; // make sure your firebase config is correct
+import { auth } from "@/lib/firebase"; 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function RegisterForm() {

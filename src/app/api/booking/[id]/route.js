@@ -70,7 +70,6 @@ import { connectDB } from "@/lib/connectDB";
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 
-// GET: fetch bookings (optionally filter by email)
 export const GET = async (request) => {
   try {
     const db = await connectDB();
@@ -89,7 +88,6 @@ export const GET = async (request) => {
   }
 };
 
-// POST: create a new booking
 export const POST = async (request) => {
   try {
     const db = await connectDB();
@@ -117,7 +115,6 @@ export const POST = async (request) => {
   }
 };
 
-// PATCH: update booking status
 export const PATCH = async (req, { params }) => {
   try {
     const { status } = await req.json();

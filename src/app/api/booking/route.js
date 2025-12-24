@@ -6,7 +6,6 @@ export const GET = async (request) => {
     const db = await connectDB();
     const bookingsCollection = db.collection("bookings");
 
-    // If you want to fetch bookings for a specific user, extract email from query
     const url = new URL(request.url);
     const email = url.searchParams.get("email");
 

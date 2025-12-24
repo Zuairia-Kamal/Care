@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
 
-      {/* Banner / Slider */}
+     
       <section className="bg-blue-600 text-white py-20 px-6 text-center">
         <div className="flex justify-center mb-6">
           <Image
@@ -27,19 +27,19 @@ export default function HomePage() {
         </p>
       </section>
 
-     {/* About Section */}
+   
 <section className="relative w-full h-[320px] md:h-[420px] flex items-center justify-center">
-  {/* Background Image */}
+ 
   <img
     src="/images/3.jpg"
     alt="About Care.xyz"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Dark Overlay */}
+
   <div className="absolute inset-0 bg-black/50"></div>
 
-  {/* Content */}
+ 
   <div className="relative z-10 max-w-5xl px-6 text-center text-white">
     <h2 className="text-3xl md:text-4xl font-bold mb-4">
       About Us
@@ -54,7 +54,7 @@ export default function HomePage() {
 </section>
 
 
-      {/* Services Overview */}
+ 
       <section className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-6">Our Services</h2>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials / Success Metrics */}
+      
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <h2 className="text-3xl font-bold">What Our Users Say</h2>

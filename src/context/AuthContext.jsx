@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser?.email) {
         try {
-          // 🔹 Fetch user role from MongoDB
+         
           const res = await fetch(`/api/users?email=${firebaseUser.email}`);
           const dbUser = await res.json();
 
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
             email: firebaseUser.email,
             displayName: firebaseUser.displayName,
             photoURL: firebaseUser.photoURL,
-            role: dbUser?.role || "user", // ✅ default safety
+            role: dbUser?.role || "user", 
           });
         } catch (error) {
           console.error("Auth role fetch failed:", error);

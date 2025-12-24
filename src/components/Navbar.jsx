@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
+   
         <div className="flex items-center space-x-3">
           <Image
             src="/images/logo.jpg"
@@ -34,7 +34,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Navigation Links */}
+     
         <div className="space-x-6 flex items-center">
           <Link href="/" className="text-gray-700 hover:text-blue-600">
             Home

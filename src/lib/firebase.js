@@ -11,11 +11,8 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Prevent Firebase from initializing multiple times (important for Next.js)
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// Firebase Authentication
 export const auth = getAuth(app);
 
-// Google Authentication Provider
 export const googleProvider = new GoogleAuthProvider();
