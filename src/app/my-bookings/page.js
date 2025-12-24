@@ -11,50 +11,50 @@ export default function MyBookingsPage() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+//   useEffect(() => {
+//   if (!user) return;
+
+//   const fetchBookings = async () => {
+//     try {
+//       const res = await fetch(`/api/booking?email=${user.email}`);
+
+//       if (!res.ok) {
+//         throw new Error("Failed to fetch bookings");
+//       }
+
+//       const data = await res.json();
+//       setBookings(data);
+//     } catch (err) {
+//       console.error("Fetch bookings error:", err);
+//       setBookings([]); 
+//     } finally {
+//       setLoading(false); 
+//     }
+//   };
+
+//   fetchBookings();
+// }, [user]);
+
+useEffect(() => {
   if (!user) return;
 
   const fetchBookings = async () => {
     try {
       const res = await fetch(`/api/booking?email=${user.email}`);
-
-      if (!res.ok) {
-        throw new Error("Failed to fetch bookings");
-      }
-
+      if (!res.ok) throw new Error("Failed to fetch bookings");
       const data = await res.json();
       setBookings(data);
     } catch (err) {
       console.error("Fetch bookings error:", err);
-      setBookings([]); // fallback
+      setBookings([]);
     } finally {
-      setLoading(false); // ensure loading ends
+      setLoading(false);
     }
   };
 
   fetchBookings();
 }, [user]);
 
-
-
-  // const handleCancel = async (id) => {
-  //   try {
-  //     // await fetch(`/api/booking`, {
-  //     await fetch(`/api/booking/${id}`, {
-  //       method: "PATCH",
-  //       headers: { "Content-Type": "application/json" },
-  //       // body: JSON.stringify({ bookingId: id, status: "Cancelled" }),
-  //       body: JSON.stringify({ status: "Cancelled" }),
-  //     });
-  //     setBookings(
-  //       bookings.map((b) =>
-  //         b._id === id ? { ...b, status: "Cancelled" } : b
-  //       )
-  //     );
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
 
   const handleCancel = async (id) => {
   await fetch(`/api/booking/${id}`, {

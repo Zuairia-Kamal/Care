@@ -48,25 +48,7 @@ export default function Navbar() {
               My Bookings
             </Link>
           )}
-          {/* {user?.role === "admin" && (
-  <Link
-    href="/admin/bookings"
-    className="text-gray-700 hover:text-blue-600"
-  >
-    Admin Panel
-  </Link>
-)} */}
-          {user && user.email === "zuairiakamal@gmail.com" && (
-  <Link
-    href="/admin/bookings"
-    className="text-red-600 font-semibold"
-  >
-    Admin
-  </Link>
-)}
-
-
-
+          
           {!user ? (
             <>
               <Link href="/login" className="text-gray-700 hover:text-blue-600">
